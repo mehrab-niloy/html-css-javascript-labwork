@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>prime number</title>
+        <link rel="stylesheet" href="home_prime.css">
+    </head>
+    <body>
+        <h1>prime number or not</h1>
+        <label for="prime_number">Input:</label>
+        <input type="number" id="prime_id"><br><br>
+        <button onclick="fun()">check</button>
+        <p id="output_id"></p>
+        <script>
+            function fun()
+            {
+
+            
+            var input=document.getElementById("prime_id").value;
+            var tem=0;
+            for(var i=2;i<input/2;i++)
+            {
+                if(input%i==0&&input!=2)
+                {
+                    tem=1;
+                    break;
+                }
+
+            }
+            if(tem==0&&input!=2)
+            {
+                document.getElementById("output_id").innerHTML="prime";
+            }
+            else
+            document.getElementById("output_id").innerHTML="Not prime";
+        }
+        </script>
+    </body>
+</html>

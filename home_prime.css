@@ -1,0 +1,16 @@
+body
+{
+    text-align: center;
+
+}
+h1
+{
+    color: brown;
+    
+}
+#output_id
+{
+    color: blue;
+    font-size: large;
+    font-style: italic;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body style="text-align:center;">
+	<h2>
+		GeeksForGeeks
+	</h2>
+	<h2>
+		How to get month name from
+		Date using Javascript?
+	</h2>
+
+	<button onclick="myFunction()">
+		Click Me!
+	</button>
+
+	<h3 id="demoID" style="color:green;">
+	</h3>
+
+	<script>
+		function myFunction() {
+			// initializing an array
+			const months = [
+				"January", "February",
+				"March", "April", "May",
+				"June", "July", "August",
+				"September", "October",
+				"November", "December"
+			];
+
+			const d = new Date();
+			document.getElementById(
+				"demoID").innerHTML =
+				"The current month is "
+				+ months[d.getMonth()];
+		}
+	</script>
+</body>
+
+</html>

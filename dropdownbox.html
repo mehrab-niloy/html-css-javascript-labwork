@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>jQuery Selector</title>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+	<script>
+		$(document).ready(function() {
+			$("#submit").click(function() {
+				alert($("#myselection").val());
+			});
+		});
+	</script>
+	<style>
+		div {
+			width: 50%;
+			height: 200px;
+			padding: 10px;
+			border: 2px solid green;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+
+		<p>The selected value:</p>
+		<select id="myselection">
+			<option value="no 1">Messi</option>
+			<option value="no 2">Ronaldo</option>
+		</select>
+		<br>
+		<br>
+		<button id="submit">Submit</button>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>menudemo</title>
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            $(function(){$("#menu").menu();});
+        </script>
+       <style>
+        #menu
+        {
+            width: 150px;
+        }
+       </style>
+        <ul id="menu">
+            <li><div>toys</div></li>
+            <li><div>books</div></li>
+            <li>
+                <div>electronics</div>
+                <ul>
+                    <li><div>hifi</div></li>
+                    <li><div>utilities</div></li>
+                </ul>
+            </li>
+            <li>
+                <div>music</div>
+                <ul>
+                    <li><div>pop</div></li>
+                    <li><div>rock</div></li>
+                    <li><div>metal</div></li>
+                </ul>
+            </li>
+            <li>
+                <div>game</div>
+                <ul>
+                    <li><div>football</div>
+                        <ul>
+                            <li><div>club football</div></li>
+                            <li><div>international football</div></li> 
+                        </ul>
+                    </li>
+                    <li><div>cicket</div></li>
+                    <li><div>batminton</div></li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

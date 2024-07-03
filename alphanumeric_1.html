@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		JavaScript | Validate If input is alphanumeric or not?
+	</title>
+</head>
+
+<body id = "body" align = "center">
+	
+	<h1 style = "color:green;" >
+		Alphanumeric or not?
+	</h1>
+	
+	<p id = "GFG_UP" style =
+		"font-size: 15px; font-weight: bold;">
+	</p>
+	
+	<form id = "formElement">
+		Input: <input id = "input1" type = "text" />
+	</form>
+	
+	<br>
+	
+	
+
+	<button onclick="GFG_Fun()">
+		Click here
+	</button>
+	
+	<p id = "GFG_DOWN" style =
+		"font-size: 24px; font-weight: bold; color:green;">
+	</p>
+	
+	<script>
+		var el_up = document.getElementById('GFG_UP');
+		var el_down = document.getElementById('GFG_DOWN');
+		var input = document.getElementById('input1');
+		
+		el_up.innerHTML = "Click on the button to "
+				+ "validate alphanumeric input.";	
+		
+		function GFG_Fun() {
+			var val = input.value;
+			var RegEx = /^[a-z0-9]+$/i;
+			var Valid = RegEx.test(val);
+			el_down.innerHTML = Valid;
+		}
+	</script>
+</body>
+
+</html>

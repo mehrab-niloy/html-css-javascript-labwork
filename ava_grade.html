@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<body>
+    <h1>avarage and grade calculation</h1>
+    <style>
+        h1{text-align: center;}
+        p{
+            text-align: center;
+        }
+    </style>
+    <p id="avg_grade"></p>
+    <script>
+        var pr="";
+        var sum=0;
+        var arr=[['n',85],['j',75],['e',85],['f',71],['g',81]];
+        for(var i=0;i<arr.length;i++)
+        {
+            sum+=arr[i][1];
+        }
+        var avg=sum/arr.length;
+        if(avg<60)
+        pr="c";
+        else if(avg<70)
+        pr="b";
+        else if(avg<80)
+        pr="a";
+        else if(avg<90)
+        pr="a+";
+        document.getElementById("avg_grade").innerHTML="avarage is "+avg+"<br>"+"grade is "+pr;
+    </script>
+</body>

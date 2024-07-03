@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>monthname</title>
+    </head>
+    <body>
+        <h1>Get monthname from a particular date</h1>
+        <p id="monthid"></p>
+        <button onclick="myfunction()">month name</button>
+        <script>
+            function myfunction()
+            {
+
+              
+              const arr = [
+                "January", "February", 
+                "March", "April", "May", 
+                "June", "July", "August",
+                "September", "October", 
+                "November", "December"
+            ];
+                const d= new Date("5/5/2000");
+                document.getElementById("monthid").innerHTML=arr[d.getMonth()];
+
+            }
+            
+
+        </script>
+    </body>
+</html>

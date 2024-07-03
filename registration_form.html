@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="registration_form.css">
+    <link rel="stylesheet" href="index.js">
+    <title>labtest</title>
+</head>
+
+<body>
+
+
+    <div>
+        <label for="uname">Enter username: </label>
+        <input placeholder="niloy19006" type="text" id="uname" name="name" required size="45"
+            pattern="[A-Za-z0-9]{3,10}" />
+        <span class="validity"></span>
+        <p>Usernames must be 3-10 characters in length.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="uname">Enter Full Name: </label>
+        <input placeholder="Mehrab Niloy" type="text" id="fname" name="name" required size="45"
+            pattern="[a-zA-Z\s*]{3,20}" />
+        <span class="validity"></span>
+        <p>Fullnames must be 3-15 only characters in length.</p>
+    </div>
+    <br>
+
+    <div class="form-example" for="uname">
+        <label for="uname">Enter your email: </label>
+        <input type="email" name="name" id="email" size="45" placeholder="mehrabniloy1909@gmail.com" required>
+        <span class="validity"></span>
+
+    </div>
+
+    <br>
+
+    <div>
+
+        <label for="">Phone Number : </label>
+        <input id="phone" type="tel" name="name" size="45" placeholder="017726455" pattern="[0-9]{11,11}" required />
+        <span class="validity"></span>
+        <p>phone number required 11 digits number</p>
+
+    </div>
+
+    <br>
+
+    <div>
+        <label for="">Choose your Gender : </label>
+        <input id="male" type="radio" name="gender" value="male" checked="checked" />
+        Male
+
+        <input type="radio" id="female" name="gender" value="female" checked="checked"> Female<br>
+    </div>
+
+
+
+    <div>
+
+        <label for="pet-select">MBSTU  Faculty List</label>
+        <button onclick="eng()">Enginnering</button>
+        <button onclick="lscience()">Life Science</button>
+        <button onclick="science()">Science</button>
+
+    </div>
+
+    <div id="engineeringFaculty">
+        <li>cse</li>
+        <li>Ict</li>
+        <li>textile</li>
+    </div>
+
+    <div id="lscience">
+        <li>Bge</li>
+        <li>Bmb</li>
+        <li>Esrm</li>
+    </div>
+    <div id="science">
+        <li>Math</li>
+        <li>Chemistry</li>
+        <li>Physics</li>
+    </div>
+
+
+
+    <div>
+        <input type="checkbox" name="check" value="check" id="check">I Agree to submit
+        <p></p>
+    </div>
+
+    <div>
+        <button onclick="checkData()">submit</button>
+    </div>
+
+    <script>
+
+
+        function checkData() {
+            if (document.getElementById('check').checked) {
+                alert('Submit successfully');
+                input.value="";
+
+            }
+            else {
+                alert('check the checkBox');
+
+            }
+        }
+
+        document.getElementById('engineeringFaculty').style.display = 'none';
+
+        document.getElementById('lscience').style.display = 'none';
+
+        function eng() {
+            document.getElementById('engineeringFaculty').style.display = 'block';
+            document.getElementById('lscience').style.display = 'none';
+            document.getElementById('science').style.display = 'none';
+        }
+        function lscience() {
+            document.getElementById('engineeringFaculty').style.display = 'none';
+            document.getElementById('lscience').style.display = 'block';
+            document.getElementById('science').style.display = 'none';
+        }
+
+        function science() {
+            document.getElementById('engineeringFaculty').style.display = 'none';
+            document.getElementById('lscience').style.display = 'none';
+            document.getElementById('science').style.display = 'block';
+        }
+
+    </script>
+</body>
+
+</html>

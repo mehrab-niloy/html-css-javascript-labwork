@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter a Number: <input type="number" id="num"><br><br>
+    <input type="submit" value="Submit" onclick="isPrime()">
+    <p id="prime"></p>
+</body>
+
+<script>
+    function isPrime()
+    {
+        var x = document.getElementById("num").value;
+        var tmp=0;
+        for(var i = 2;i<=x/2;i++)
+        {
+            if(x%i==0 && x!=2)
+            {
+                tmp=1;
+                break;
+            }
+        }
+        if(tmp==1)
+        {
+            document.getElementById("prime").innerHTML = "Not Prime";
+        }
+        else
+        {
+            document.getElementById("prime").innerHTML = "Prime";
+        }
+    }
+</script>
+</html>
